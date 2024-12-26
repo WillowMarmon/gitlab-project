@@ -10,7 +10,7 @@
 
 ## Description
 
-This project consists of the installation and setup of my actual on-prem Dev-Ops
+This project consists of the installation and setup of my actual on-prem CI/CD
 server that I use for open-source project development. It involves the installation,
 configuration, and deployment of GitLab using Docker and Docker-Compose.
 
@@ -32,15 +32,15 @@ office tower for the purpose of a home server, but in this example we'll be usin
 my personal server which is a combination of purpose built server hardware and
 some more consumer grade elements.
 
-Mine is running nix-os (a Linux distribution), but yours can be running Macos, Linux,
+Mine is running nix-os (a Linux distribution), but yours can be running Windows, Macos, Linux,
 or even openBSD. So long as git-lab is available there's a good chance it'll work.
 
 ### 2. Networking
 
 This project is not really about networking, docker networking, or what kinds of
 networking you're going to need. If you need more information about configuring your
-home-lab network I'd recommend [serve the home]() they have great resources, and
-if you're looking for docker networking I'd recommend [this article]() by SOMEGUY.
+home-lab network I'd recommend [serve the home](https://servethehome.com) they
+have great resources.
 
 ### 3. An understanding of your operating system and included tools
 
@@ -64,20 +64,20 @@ This is often placed in either /opt/stacks/ or /srvs/stacks/. From here on we'll
 be refering to this location as ...stacks/ as there are no specific requirements.
 In any example code however this will be listed as /srvs/stacks.
 
-Next within .../stacks, create a dir for the docker-compose stack. Our file tree
+Next within .../stacks, create a dir for the git-lab stack. Our file tree
 should now look like this:
 
 ```sh
   + /
   |-+ srvs/
   | |-+ stacks/
-  | | |-+ gitlab/
+  | | |-+ git-lab/
 ```
 
 ### 3. Create The docker-compose.yaml File
 
 Next we're going to write our docker-compose.yaml. Go ahead and open
-`/srvs/stacks/git-lab/docker-compose.yaml` in your favorite text editor
+`...stacks/git-lab/docker-compose.yaml` in your favorite text editor
 and add the following:
 
 ```yaml
@@ -99,6 +99,9 @@ services:
       - "/srvs/stacks/git-lab/logs:/var/log/gitlab"
     shm_size: "256m"
 ```
+
+Make sure you change the volume locations from /srvs/stacks and /srvs/storage
+to the correct paths on your system.
 
 ### 4. Start the git-lab stack
 
