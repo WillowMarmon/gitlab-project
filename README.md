@@ -6,6 +6,8 @@
 
 ⚙️ [Configuration]()
 
+🌐 [Post-Install]()
+
 ## Description
 
 This project consists of the installation and setup of my actual on-prem Dev-Ops
@@ -135,4 +137,57 @@ GITLAB_OMNIBUS_CONFIG: |
 
 There are many other settings you can configure in GITLAB_OMNIBUS_CONFIG, and
 you can see them all [here](https://gitlab.com/gitlab-org/omnibus-gitlab/blob/master/files/gitlab-config-template/gitlab.rb.template)
+
+## Post Installation Configuration
+
+### 1. Sign into your instance as root
+
+Git-lab helpfully sets up a user account for us with the username of root. The password
+is stored in `/srvs/stacks/git-lab/config/initial_root_password` for the first 24
+hours after the instance is created after which that file is removed.
+
+Go ahead and navigate to the FQDN we specified earlier and sign in with those credentials.
+
+### 2. Change your password
+
+The first thing to do after signing in is to change your password. Select your gravatar
+in the upper right corner and select `Edit Profile`.
+
+[img of Edit Profile]()
+
+Next we go to password on the right, and enter the current password followed by our
+new password.
+
+Once the change is complete it will ask you to sign back into your gitlab.
+
+### 3. Adjust Profile Settings
+
+Git-lab provides us with some sane default settings, but once you start using the
+software they usually aren't enough. Go ahead and head back to `Edit Profile`
+
+[img of Edit Profile]()
+
+Go ahead and set your name and email (even though we haven't set up email on the
+server side, it still uses it for avatar detection using [gravatar](https://gravatar.com))
+
+### 4. Change Username
+
+Head over to **Account > Change Username** and replace `root` with your desired
+username.
+
+[img of change username]()
+
+### 5. Restrict or Disable Public Sign-Up
+
+By default anyone can request to sign up for an account but must be manually
+approved by an administrator.
+
+To change that, navigate to the admin pannel with the button in the botom right.
+Then go to `Settings > General` and select Sign-up restrictions.
+
+[img of sign-up restictions]()
+
+Now we can diable Sign-up all together, or restrict it with a confirmation email
+and/or email domains (This last option is very useful for orgs who have all their
+users on one email domain).
 
