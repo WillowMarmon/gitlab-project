@@ -1,12 +1,12 @@
 # Setup an On Prem Dev-Ops server from scratch using git-lab
 
-✅ [Prerequisites]()
+✅ [Prerequisites](#prerequisites)
 
-💿 [Installation]()
+💿 [Installation](#installation)
 
-⚙️ [Configuration]()
+⚙️ [Configuration](#configuration)
 
-🌐 [Post-Install]()
+🌐 [Post-Install](#post-install)
 
 ## Description
 
@@ -23,7 +23,7 @@ configuration, and deployment of GitLab using Docker and Docker-Compose.
 
 - YAML
 
-## Prerequisites
+<H2 id="prerequisites">Prerequisites</H2>
 
 ### 1. A server
 
@@ -49,7 +49,7 @@ knowledge about your tools is expected. For example, I'll be using a text editor
 called vim, but other options like nano, emacs, or notepad would work just as
 well just so long as you understand the tools yourself.
 
-## The Installation
+<H2 id="installation">The Installation</H2>
 
 ### 1. Install Docker and Docker-Compose
 
@@ -107,7 +107,7 @@ start the container:
 `# docker-compose up -d`
 The `-d` is to start it in the background, or "disconnected."
 
-## Configuration
+<H2 id="configuration">Configuration</H2>
 
 For configuration we have two options. You can either write the configuration
 options within the container in /etc/gitlab/gitlab.rb, or you can write them
@@ -139,7 +139,7 @@ GITLAB_OMNIBUS_CONFIG: |
 There are many other settings you can configure in GITLAB_OMNIBUS_CONFIG, and
 you can see them all [here](https://gitlab.com/gitlab-org/omnibus-gitlab/blob/master/files/gitlab-config-template/gitlab.rb.template)
 
-## Post Installation Configuration
+<H2 id="post-install">Post Installation Configuration</H2>
 
 ### 1. Sign into your instance as root
 
