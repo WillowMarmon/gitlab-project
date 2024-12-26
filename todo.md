@@ -4,5 +4,5 @@
 - [x] #2 Write Project Summary
 - [x] #3 Write Install
 - [x] #4 Write Post install setup
-- [ ] #6 Add Media
+- [x] #6 Add Media
 - [ ] #7 Edit

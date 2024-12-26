@@ -154,7 +154,7 @@ Go ahead and navigate to the FQDN we specified earlier and sign in with those cr
 The first thing to do after signing in is to change your password. Select your gravatar
 in the upper right corner and select `Edit Profile`.
 
-[img of Edit Profile]()
+![An image of ](imgs/edit_profile.png)
 
 Next we go to password on the right, and enter the current password followed by our
 new password.
@@ -166,7 +166,7 @@ Once the change is complete it will ask you to sign back into your gitlab.
 Git-lab provides us with some sane default settings, but once you start using the
 software they usually aren't enough. Go ahead and head back to `Edit Profile`
 
-[img of Edit Profile]()
+![An image with full name and email highlighted inside edit profile](imgs/profile_settings.png)
 
 Go ahead and set your name and email (even though we haven't set up email on the
 server side, it still uses it for avatar detection using [gravatar](https://gravatar.com))
@@ -176,7 +176,7 @@ server side, it still uses it for avatar detection using [gravatar](https://grav
 Head over to **Account > Change Username** and replace `root` with your desired
 username.
 
-[img of change username]()
+![an image of the change username section with the username entry highlighted](imgs/change_username.png)
 
 ### 5. Restrict or Disable Public Sign-Up
 
@@ -186,7 +186,7 @@ approved by an administrator.
 To change that, navigate to the admin pannel with the button in the botom right.
 Then go to `Settings > General` and select Sign-up restrictions.
 
-[img of sign-up restictions]()
+![an image of the sign-up restrictions section](imgs/sign_up_restrict.png)
 
 Now we can diable Sign-up all together, or restrict it with a confirmation email
 and/or email domains (This last option is very useful for orgs who have all their
@@ -196,7 +196,7 @@ users on one email domain).
 
 Head over to **SSH Keys** and click add new key.
 
-[img of SSH Keys Add]()
+![an image of the add an ssh key screen](imgs/ssh_key_add.png)
 
 Then put the public key in the key field, give it a title, and set up it's
 authentication type and expiration date.
