@@ -22,7 +22,6 @@ configuration, and deployment of GitLab using Docker and Docker-Compose.
 ### Languages Used
 
 - YAML
--
 
 ## Prerequisites
 
@@ -68,10 +67,12 @@ In any example code however this will be listed as /srvs/stacks.
 Next within .../stacks, create a dir for the docker-compose stack. Our file tree
 should now look like this:
 
-- /
-  - srvs
-    - stacks
-      - git-lab
+```sh
+  + /
+  |-+ srvs/
+  | |-+ stacks/
+  | | |-+ gitlab/
+```
 
 ### 3. Create The docker-compose.yaml File
 
