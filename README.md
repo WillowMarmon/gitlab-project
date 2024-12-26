@@ -191,3 +191,15 @@ Now we can diable Sign-up all together, or restrict it with a confirmation email
 and/or email domains (This last option is very useful for orgs who have all their
 users on one email domain).
 
+### Adding SSH Keys to Your Account
+
+Head over to **SSH Keys** and click add new key.
+
+[img of SSH Keys Add]()
+
+Then put the public key in the key field, give it a title, and set up it's
+authentication type and expiration date.
+
+Then click add key.
+
+###
